@@ -1,55 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nguyễn Minh Khôi Dev</title>
+<title>Nguyễn Minh Khôi</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-body{
+*{
 margin:0;
-background:#0d1117;
+padding:0;
+box-sizing:border-box;
 font-family: monospace;
+}
+
+body{
+
+background: linear-gradient(135deg,#020617,#020617,#0f172a);
 color:white;
+overflow-x:hidden;
+
 }
 
 /* center section */
+
 section{
+
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 padding:40px;
+
 }
 
-/* terminal */
+/* TERMINAL */
+
 .terminal{
+
 width:800px;
 max-width:95%;
-background:#161b22;
-border-radius:10px;
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
+background:#0f172a;
+border-radius:15px;
 overflow:hidden;
+position:relative;
+
+border:1px solid rgba(255,255,255,0.1);
+
+box-shadow:
+
+0 0 40px rgba(0,255,255,0.1),
+0 0 80px rgba(0,140,255,0.1);
+
+}
+
+/* glow border */
+
+.terminal::before{
+
+content:"";
+position:absolute;
+inset:-2px;
+border-radius:15px;
+
+background:linear-gradient(
+45deg,
+#00f5ff,
+#0066ff,
+#7c3aed,
+#00f5ff
+);
+
+z-index:-1;
+filter:blur(10px);
+opacity:0.5;
+
 }
 
 /* top bar */
+
 .top{
+
 display:flex;
 align-items:center;
-padding:10px;
-background:#21262d;
+padding:12px;
+background:#1e293b;
+
 }
 
 .dot{
+
 width:12px;
 height:12px;
 border-radius:50%;
 margin-right:8px;
+
 }
 
 .red{background:#ff605c;}
@@ -57,70 +105,150 @@ margin-right:8px;
 .green{background:#00ca4e;}
 
 .title{
+
 margin-left:auto;
-font-size:12px;
-color:#9ca3af;
+font-size:13px;
+color:#94a3b8;
+
 }
 
-/* code area */
+/* code */
+
 .code{
-padding:25px;
-line-height:1.6;
-font-size:14px;
-color:#58a6ff;
+
+padding:30px;
+font-size:15px;
+line-height:1.8;
+color:#60a5fa;
 white-space:pre-wrap;
+
 }
 
-/* contact */
+/* CONTACT */
+
 .contacts{
+
 display:flex;
 flex-direction:column;
-gap:20px;
-width:400px;
+gap:25px;
+width:420px;
 max-width:90%;
+
 }
 
+/* CARD */
+
 .contact-card{
-background:#161b22;
-border-radius:12px;
-padding:25px;
+
 display:flex;
 align-items:center;
 gap:20px;
+
+padding:28px;
+
+background:#0f172a;
+border-radius:16px;
+
 cursor:pointer;
+position:relative;
+
+border:1px solid rgba(255,255,255,0.08);
+
 transition:0.3s;
-border:1px solid #30363d;
+
+}
+
+/* neon border */
+
+.contact-card::before{
+
+content:"";
+position:absolute;
+inset:-1px;
+
+border-radius:16px;
+
+background:linear-gradient(
+120deg,
+#00f5ff,
+#6366f1,
+#8b5cf6,
+#00f5ff
+);
+
+z-index:-1;
+opacity:0;
+transition:0.3s;
+
 }
 
 .contact-card:hover{
-background:#21262d;
-transform:translateY(-4px);
+
+transform:translateY(-6px) scale(1.02);
+
 }
+
+.contact-card:hover::before{
+
+opacity:0.8;
+
+}
+
+/* icons */
 
 .contact-card i{
+
 font-size:30px;
+
 }
 
-.github i{color:#fff;}
+.github i{color:white;}
 .facebook i{color:#1877f2;}
 .discord i{color:#5865f2;}
+
+/* text */
+
+.contact-card h3{
+
+font-size:20px;
+
+}
+
+.contact-card p{
+
+color:#94a3b8;
+
+}
+
+/* footer */
+
+.footer{
+
+text-align:center;
+padding:40px;
+color:#64748b;
+
+}
 
 </style>
 </head>
 
 <body>
 
-<!-- INTRO TERMINAL -->
+<!-- INTRO -->
 
 <section>
 
 <div class="terminal">
 
 <div class="top">
+
 <div class="dot red"></div>
 <div class="dot yellow"></div>
 <div class="dot green"></div>
+
 <div class="title">terminal</div>
+
 </div>
 
 <div class="code">
@@ -163,38 +291,58 @@ aboutMe();
 
 <div class="contacts">
 
-<div class="contact-card github" onclick="openLink('https://github.com/user-Map')">
+<div class="contact-card github"
+onclick="openLink('https://github.com/user-Map')">
+
 <i class="fa-brands fa-github"></i>
+
 <div>
 <h3>GitHub</h3>
 <p>@user-Map</p>
 </div>
+
 </div>
 
-<div class="contact-card facebook" onclick="openLink('https://www.facebook.com/share/1788aVgsrh/?mibextid=wwXIfr')">
+<div class="contact-card facebook"
+onclick="openLink('https://www.facebook.com/share/1788aVgsrh/?mibextid=wwXIfr')">
+
 <i class="fa-brands fa-facebook"></i>
+
 <div>
 <h3>Facebook</h3>
 <p>Profile</p>
 </div>
+
 </div>
 
-<div class="contact-card discord" onclick="openLink('https://discord.gg/YvzZF4wx')">
+<div class="contact-card discord"
+onclick="openLink('https://discord.gg/YvzZF4wx')">
+
 <i class="fa-brands fa-discord"></i>
+
 <div>
 <h3>Discord</h3>
 <p>Join Server</p>
 </div>
+
 </div>
 
 </div>
 
 </section>
 
+<div class="footer">
+
+user-map.github.io
+
+</div>
+
 <script>
 
 function openLink(url){
+
 window.open(url,"_blank");
+
 }
 
 </script>
