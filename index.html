@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Map Dev</title>
+
+<title>Nguyễn Minh Khôi</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -13,126 +14,143 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: monospace;
+font-family: "Courier New", monospace;
 }
 
 body{
 background: radial-gradient(circle at top,#0f172a,#020617);
 color:white;
-min-height:100vh;
 display:flex;
 flex-direction:column;
 align-items:center;
-padding:30px 15px;
+padding:40px 20px;
+min-height:100vh;
 }
 
-/* TERMINAL */
+/* name */
+
+.name{
+font-size:40px;
+font-weight:bold;
+background:linear-gradient(90deg,#00d4ff,#8b5cf6);
+-webkit-background-clip:text;
+color:transparent;
+text-align:center;
+margin-top:10px;
+}
+
+.role{
+opacity:.7;
+margin-top:10px;
+}
+
+/* online */
+
+.online{
+margin-bottom:20px;
+background:#0f172a;
+border:1px solid #1e293b;
+padding:6px 18px;
+border-radius:20px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.dot{
+width:8px;
+height:8px;
+background:#22c55e;
+border-radius:50%;
+}
+
+/* terminal */
 
 .terminal{
 width:100%;
-max-width:720px;
-background:#0b1220;
-border-radius:18px;
+max-width:500px;
+background:#020617;
+border-radius:20px;
+border:1px solid #1e293b;
+margin-top:30px;
 overflow:hidden;
-box-shadow:
-0 20px 60px rgba(0,0,0,.6),
-inset 0 0 0 1px rgba(255,255,255,.05);
-margin-bottom:30px;
+box-shadow:0 0 30px rgba(0,0,0,.6);
 }
 
 .terminal-header{
-background:#1c2433;
-padding:10px 15px;
+background:#0f172a;
+padding:10px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 .buttons{
 display:flex;
-gap:8px;
+gap:6px;
 }
 
-.buttons span{
+.btn{
 width:12px;
 height:12px;
 border-radius:50%;
-display:block;
 }
 
-.red{background:#ff5f56;}
-.yellow{background:#ffbd2e;}
-.green{background:#27c93f;}
+.red{background:#ff5f56}
+.yellow{background:#ffbd2e}
+.green{background:#27c93f}
 
-.title{
-color:#9ca3af;
+.file{
+opacity:.6;
 font-size:14px;
 }
 
 .code{
-padding:25px;
-font-size:15px;
-line-height:1.7;
+padding:20px;
+font-size:14px;
+line-height:1.8;
 color:#60a5fa;
-white-space:pre-line;
 }
 
-/* CONTACT */
+/* contact */
 
 .contacts{
+margin-top:40px;
 width:100%;
-max-width:720px;
+max-width:500px;
 display:flex;
 flex-direction:column;
 gap:20px;
 }
 
 .card{
-background:#0b1220;
+background:#020617;
+border:1px solid #1e293b;
 border-radius:18px;
-padding:25px;
+padding:20px;
 display:flex;
-flex-direction:column;
 align-items:center;
-text-align:center;
+gap:16px;
 text-decoration:none;
 color:white;
-box-shadow:
-0 15px 40px rgba(0,0,0,.5),
-inset 0 0 0 1px rgba(255,255,255,.05);
-transition:.25s;
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-box-shadow:
-0 20px 50px rgba(0,0,0,.7);
+transform:translateY(-4px);
+border-color:#6366f1;
+box-shadow:0 0 20px rgba(99,102,241,.4);
 }
 
 .icon{
-width:70px;
-height:70px;
-border-radius:16px;
-background:#111827;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-margin-bottom:15px;
+font-size:24px;
+width:40px;
+text-align:center;
 }
 
-.github{color:#3b82f6;}
-.facebook{color:#1877f2;}
-.discord{color:#5865F2;}
-
-.name{
-font-size:20px;
-margin-bottom:6px;
-}
-
-.user{
-color:#9ca3af;
+.footer{
+margin-top:40px;
+opacity:.4;
 font-size:14px;
 }
 
@@ -141,87 +159,79 @@ font-size:14px;
 
 <body>
 
-<!-- ABOUT TERMINAL -->
+<div class="online">
+<div class="dot"></div>
+Online
+</div>
+
+<div class="name">NGUYỄN MINH KHÔI</div>
+<div class="role">Backend Developer — Junior — Vietnamese</div>
+
 
 <div class="terminal">
 
 <div class="terminal-header">
-
 <div class="buttons">
-<span class="red"></span>
-<span class="yellow"></span>
-<span class="green"></span>
+<div class="btn red"></div>
+<div class="btn yellow"></div>
+<div class="btn green"></div>
 </div>
-
-<div class="title">about.ts</div>
-
+<div class="file">about.ts</div>
 </div>
 
 <div class="code">
 
-1 function aboutMe() {
+const developer = { <br><br>
 
-2 const name = "Nguyễn Minh Khôi";
+&nbsp;&nbsp;name: "Nguyễn Minh Khôi", <br>
+&nbsp;&nbsp;work: "Backend Developer", <br>
+&nbsp;&nbsp;role: "Junior", <br>
+&nbsp;&nbsp;birthday: "27/05", <br>
+&nbsp;&nbsp;country: "Vietnam", <br>
+&nbsp;&nbsp;alias: ["Map"], <br>
 
-3 const nickname = "Map";
+};<br><br>
 
-4 const location = "Long An";
-
-5 const hobby = "Code • Ngủ";
-
-7 console.log("Xin chào 👋");
-
-8 console.log("Tôi là: " + name);
-
-9 console.log("Nickname: " + nickname);
-
-10 console.log("Nơi sống: " + location);
-
-11 console.log("Hobby: " + hobby);
-
-}
+console.log("Xin chào 👋");<br>
+console.log("Rất vui được gặp bạn!");
 
 </div>
-
 </div>
 
-<!-- CONTACT -->
 
 <div class="contacts">
 
-<a href="https://github.com/user-Map" class="card">
-
-<div class="icon github">
-<i class="fa-brands fa-github"></i>
+<a class="card" href="https://github.com/user-Map" target="_blank">
+<div class="icon"><i class="fab fa-github"></i></div>
+<div>
+<div>GitHub</div>
+<div style="opacity:.6">@user-Map</div>
 </div>
-
-<div class="name">GitHub</div>
-<div class="user">@user-map</div>
-
 </a>
 
-<a href="https://www.facebook.com/share/1788aVgsrh/?mibextid=wwXIfr" class="card">
 
-<div class="icon facebook">
-<i class="fa-brands fa-facebook"></i>
+<a class="card" href="https://www.facebook.com/share/1788aVgsrh/?mibextid=wwXIfr" target="_blank">
+<div class="icon"><i class="fab fa-facebook"></i></div>
+<div>
+<div>Facebook</div>
+<div style="opacity:.6">Nguyễn Minh Khôi</div>
 </div>
-
-<div class="name">Facebook</div>
-<div class="user">Nguyễn Minh Khôi</div>
-
 </a>
 
-<a href="https://discord.gg/YvzZF4wx" class="card">
 
-<div class="icon discord">
-<i class="fa-brands fa-discord"></i>
+<a class="card" href="https://discord.gg/YvzZF4wx" target="_blank">
+<div class="icon"><i class="fab fa-discord"></i></div>
+<div>
+<div>Discord</div>
+<div style="opacity:.6">Join Server</div>
 </div>
-
-<div class="name">Discord</div>
-<div class="user">Join Server</div>
-
 </a>
 
+</div>
+
+
+<div class="footer">
+user-map.github.io
 </div>
 
 </body>
