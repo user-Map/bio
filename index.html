@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nguyễn Minh Khôi</title>
+<title>Map Dev</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -18,216 +17,123 @@ font-family: monospace;
 }
 
 body{
-
-background: linear-gradient(135deg,#020617,#020617,#0f172a);
+background: radial-gradient(circle at top,#0f172a,#020617);
 color:white;
-overflow-x:hidden;
-
-}
-
-/* center section */
-
-section{
-
 min-height:100vh;
 display:flex;
-justify-content:center;
+flex-direction:column;
 align-items:center;
-padding:40px;
-
+padding:30px 15px;
 }
 
 /* TERMINAL */
 
 .terminal{
-
-width:800px;
-max-width:95%;
-background:#0f172a;
-border-radius:15px;
+width:100%;
+max-width:720px;
+background:#0b1220;
+border-radius:18px;
 overflow:hidden;
-position:relative;
-
-border:1px solid rgba(255,255,255,0.1);
-
 box-shadow:
-
-0 0 40px rgba(0,255,255,0.1),
-0 0 80px rgba(0,140,255,0.1);
-
+0 20px 60px rgba(0,0,0,.6),
+inset 0 0 0 1px rgba(255,255,255,.05);
+margin-bottom:30px;
 }
 
-/* glow border */
-
-.terminal::before{
-
-content:"";
-position:absolute;
-inset:-2px;
-border-radius:15px;
-
-background:linear-gradient(
-45deg,
-#00f5ff,
-#0066ff,
-#7c3aed,
-#00f5ff
-);
-
-z-index:-1;
-filter:blur(10px);
-opacity:0.5;
-
-}
-
-/* top bar */
-
-.top{
-
+.terminal-header{
+background:#1c2433;
+padding:10px 15px;
 display:flex;
 align-items:center;
-padding:12px;
-background:#1e293b;
-
+justify-content:space-between;
+border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-.dot{
+.buttons{
+display:flex;
+gap:8px;
+}
 
+.buttons span{
 width:12px;
 height:12px;
 border-radius:50%;
-margin-right:8px;
-
+display:block;
 }
 
-.red{background:#ff605c;}
-.yellow{background:#ffbd44;}
-.green{background:#00ca4e;}
+.red{background:#ff5f56;}
+.yellow{background:#ffbd2e;}
+.green{background:#27c93f;}
 
 .title{
-
-margin-left:auto;
-font-size:13px;
-color:#94a3b8;
-
+color:#9ca3af;
+font-size:14px;
 }
 
-/* code */
-
 .code{
-
-padding:30px;
+padding:25px;
 font-size:15px;
-line-height:1.8;
+line-height:1.7;
 color:#60a5fa;
-white-space:pre-wrap;
-
+white-space:pre-line;
 }
 
 /* CONTACT */
 
 .contacts{
-
+width:100%;
+max-width:720px;
 display:flex;
 flex-direction:column;
-gap:25px;
-width:420px;
-max-width:90%;
-
+gap:20px;
 }
 
-/* CARD */
+.card{
+background:#0b1220;
+border-radius:18px;
+padding:25px;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+text-decoration:none;
+color:white;
+box-shadow:
+0 15px 40px rgba(0,0,0,.5),
+inset 0 0 0 1px rgba(255,255,255,.05);
+transition:.25s;
+}
 
-.contact-card{
+.card:hover{
+transform:translateY(-6px);
+box-shadow:
+0 20px 50px rgba(0,0,0,.7);
+}
 
+.icon{
+width:70px;
+height:70px;
+border-radius:16px;
+background:#111827;
 display:flex;
 align-items:center;
-gap:20px;
-
-padding:28px;
-
-background:#0f172a;
-border-radius:16px;
-
-cursor:pointer;
-position:relative;
-
-border:1px solid rgba(255,255,255,0.08);
-
-transition:0.3s;
-
+justify-content:center;
+font-size:28px;
+margin-bottom:15px;
 }
 
-/* neon border */
+.github{color:#3b82f6;}
+.facebook{color:#1877f2;}
+.discord{color:#5865F2;}
 
-.contact-card::before{
-
-content:"";
-position:absolute;
-inset:-1px;
-
-border-radius:16px;
-
-background:linear-gradient(
-120deg,
-#00f5ff,
-#6366f1,
-#8b5cf6,
-#00f5ff
-);
-
-z-index:-1;
-opacity:0;
-transition:0.3s;
-
-}
-
-.contact-card:hover{
-
-transform:translateY(-6px) scale(1.02);
-
-}
-
-.contact-card:hover::before{
-
-opacity:0.8;
-
-}
-
-/* icons */
-
-.contact-card i{
-
-font-size:30px;
-
-}
-
-.github i{color:white;}
-.facebook i{color:#1877f2;}
-.discord i{color:#5865f2;}
-
-/* text */
-
-.contact-card h3{
-
+.name{
 font-size:20px;
-
+margin-bottom:6px;
 }
 
-.contact-card p{
-
-color:#94a3b8;
-
-}
-
-/* footer */
-
-.footer{
-
-text-align:center;
-padding:40px;
-color:#64748b;
-
+.user{
+color:#9ca3af;
+font-size:14px;
 }
 
 </style>
@@ -235,19 +141,19 @@ color:#64748b;
 
 <body>
 
-<!-- INTRO -->
-
-<section>
+<!-- ABOUT TERMINAL -->
 
 <div class="terminal">
 
-<div class="top">
+<div class="terminal-header">
 
-<div class="dot red"></div>
-<div class="dot yellow"></div>
-<div class="dot green"></div>
+<div class="buttons">
+<span class="red"></span>
+<span class="yellow"></span>
+<span class="green"></span>
+</div>
 
-<div class="title">terminal</div>
+<div class="title">about.ts</div>
 
 </div>
 
@@ -271,81 +177,52 @@ color:#64748b;
 
 10 console.log("Nơi sống: " + location);
 
-11 console.log("Sở thích: " + hobby);
-
-12 console.log("Rất vui được làm quen 🚀");
+11 console.log("Hobby: " + hobby);
 
 }
 
-aboutMe();
-
 </div>
 
 </div>
-
-</section>
 
 <!-- CONTACT -->
 
-<section>
-
 <div class="contacts">
 
-<div class="contact-card github"
-onclick="openLink('https://github.com/user-Map')">
+<a href="https://github.com/user-Map" class="card">
 
+<div class="icon github">
 <i class="fa-brands fa-github"></i>
-
-<div>
-<h3>GitHub</h3>
-<p>@user-Map</p>
 </div>
 
-</div>
+<div class="name">GitHub</div>
+<div class="user">@user-map</div>
 
-<div class="contact-card facebook"
-onclick="openLink('https://www.facebook.com/share/1788aVgsrh/?mibextid=wwXIfr')">
+</a>
 
+<a href="https://www.facebook.com/share/1788aVgsrh/?mibextid=wwXIfr" class="card">
+
+<div class="icon facebook">
 <i class="fa-brands fa-facebook"></i>
-
-<div>
-<h3>Facebook</h3>
-<p>Profile</p>
 </div>
 
-</div>
+<div class="name">Facebook</div>
+<div class="user">Nguyễn Minh Khôi</div>
 
-<div class="contact-card discord"
-onclick="openLink('https://discord.gg/YvzZF4wx')">
+</a>
 
+<a href="https://discord.gg/YvzZF4wx" class="card">
+
+<div class="icon discord">
 <i class="fa-brands fa-discord"></i>
-
-<div>
-<h3>Discord</h3>
-<p>Join Server</p>
 </div>
 
-</div>
+<div class="name">Discord</div>
+<div class="user">Join Server</div>
+
+</a>
 
 </div>
-
-</section>
-
-<div class="footer">
-
-user-map.github.io
-
-</div>
-
-<script>
-
-function openLink(url){
-
-window.open(url,"_blank");
-
-}
-
-</script>
 
 </body>
 </html>
