@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nguyễn Minh Khôi Dev</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+background:#0d1117;
+font-family: monospace;
+color:white;
+}
+
+/* center section */
+section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+/* terminal */
+.terminal{
+width:800px;
+max-width:95%;
+background:#161b22;
+border-radius:10px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+overflow:hidden;
+}
+
+/* top bar */
+.top{
+display:flex;
+align-items:center;
+padding:10px;
+background:#21262d;
+}
+
+.dot{
+width:12px;
+height:12px;
+border-radius:50%;
+margin-right:8px;
+}
+
+.red{background:#ff605c;}
+.yellow{background:#ffbd44;}
+.green{background:#00ca4e;}
+
+.title{
+margin-left:auto;
+font-size:12px;
+color:#9ca3af;
+}
+
+/* code area */
+.code{
+padding:25px;
+line-height:1.6;
+font-size:14px;
+color:#58a6ff;
+white-space:pre-wrap;
+}
+
+/* contact */
+.contacts{
+display:flex;
+flex-direction:column;
+gap:20px;
+width:400px;
+max-width:90%;
+}
+
+.contact-card{
+background:#161b22;
+border-radius:12px;
+padding:25px;
+display:flex;
+align-items:center;
+gap:20px;
+cursor:pointer;
+transition:0.3s;
+border:1px solid #30363d;
+}
+
+.contact-card:hover{
+background:#21262d;
+transform:translateY(-4px);
+}
+
+.contact-card i{
+font-size:30px;
+}
+
+.github i{color:#fff;}
+.facebook i{color:#1877f2;}
+.discord i{color:#5865f2;}
+
+</style>
+</head>
+
+<body>
+
+<!-- INTRO TERMINAL -->
+
+<section>
+
+<div class="terminal">
+
+<div class="top">
+<div class="dot red"></div>
+<div class="dot yellow"></div>
+<div class="dot green"></div>
+<div class="title">terminal</div>
+</div>
+
+<div class="code">
+
+1 function aboutMe() {
+
+2 const name = "Nguyễn Minh Khôi";
+
+3 const nickname = "Map";
+
+4 const location = "Long An";
+
+5 const hobby = "Code • Ngủ";
+
+7 console.log("Xin chào 👋");
+
+8 console.log("Tôi là: " + name);
+
+9 console.log("Nickname: " + nickname);
+
+10 console.log("Nơi sống: " + location);
+
+11 console.log("Sở thích: " + hobby);
+
+12 console.log("Rất vui được làm quen 🚀");
+
+}
+
+aboutMe();
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section>
+
+<div class="contacts">
+
+<div class="contact-card github" onclick="openLink('https://github.com/user-Map')">
+<i class="fa-brands fa-github"></i>
+<div>
+<h3>GitHub</h3>
+<p>@user-Map</p>
+</div>
+</div>
+
+<div class="contact-card facebook" onclick="openLink('https://www.facebook.com/share/1788aVgsrh/?mibextid=wwXIfr')">
+<i class="fa-brands fa-facebook"></i>
+<div>
+<h3>Facebook</h3>
+<p>Profile</p>
+</div>
+</div>
+
+<div class="contact-card discord" onclick="openLink('https://discord.gg/YvzZF4wx')">
+<i class="fa-brands fa-discord"></i>
+<div>
+<h3>Discord</h3>
+<p>Join Server</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function openLink(url){
+window.open(url,"_blank");
+}
+
+</script>
+
+</body>
+</html>
